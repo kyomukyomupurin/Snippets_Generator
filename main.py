@@ -2,7 +2,6 @@ import json
 import os
 from os.path import join
 from pathlib import Path
-import re
 
 root_dir = '.'
 output_file = './output.json'
