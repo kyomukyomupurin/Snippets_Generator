@@ -3,17 +3,16 @@ import os
 from os.path import join
 from pathlib import Path
 
-root_dir = '.'
-output_file = './output.json'
-extension_list = ['.cc', '.cpp']
+settings = open('./settings.json', 'r')
+loaded_settings = json.load(settings)
 
 
 def make_cpp_list() -> list:
     result = []
 
-    for root, dirs, files in os.walk(root_dir):
+    for root, dirs, files in os.walk(loaded_settings["root"]):
         for file_name in files:
-            if Path(file_name).suffix in extension_list:
+            if Path(file_name).suffix in loaded_settings["extension"]:
                 result.append(join(root, file_name))
 
     return result
@@ -49,5 +48,5 @@ if __name__ == '__main__':
         if make_dict(cpp_file)["body"]:
             json_content[Path(cpp_file).stem] = make_dict(cpp_file)
 
-    with open(output_file, 'w') as of:
+    with open(loaded_settings["output"], 'w') as of:
         of.write(json.dumps(json_content, indent=4))
