@@ -3,7 +3,7 @@ import os
 from os.path import join
 from pathlib import Path
 
-settings = open('./settings.json', 'r')
+settings = open('./snippets_settings.json', 'r')
 loaded_settings = json.load(settings)
 
 
