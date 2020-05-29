@@ -1,5 +1,6 @@
 ![](https://img.shields.io/badge/license-CC0-lightgrey.svg?style=flat)
 ![](https://img.shields.io/badge/Python-3.6.9-brightgreen.svg?style=flat&logo=Python)
+![](https://img.shields.io/badge/-VSCode-blue.svg?style=flat&logo=Visual-Studio-Code)
 
 # Snippets Generator
 
