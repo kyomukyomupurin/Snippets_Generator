@@ -1,15 +1,15 @@
-# snippets generator
+# Snippets Generator
 
-競プロ用のスニペット作成スクリプト(for VSCode)。ライブラリを更新するたびに手動でスニペットも書き換えるのはつらいので。
+Snippets generator for Visual Studio Code. I developed this for competitive programming. 
 
-## 使い方
+## How to use
 
-```snippets_settings.json``` に次の 3 つの設定を書いておく。  
--  ```"root"``` : スニペット作成の対象とする一番上のディレクトリへのパス  
--  ```"output"``` : 作成される json ファイルへのパス(もともと ```output.json``` が無かったら新規作成される)  
--  ```extension``` : スニペット作成の対象とするファイルの拡張子のリスト
+Edit ```snippets_settings.json```.  
+-  ```"root"``` : Path to the top directory where the snippets will be generated.  
+-  ```"output"``` : Path to the json file to be generated.  
+-  ```extension``` : List of file extensions to generate snippets.  
 
-VSCode の json ファイルは次のような構造からなる。  
+The overall structure of the snippets json file in VSCode is like the following.
 
 ```json
     "snippets_name": {
@@ -20,9 +20,9 @@ VSCode の json ファイルは次のような構造からなる。
     }
 ```
 
-```"snippets_name"``` は各スニペットの名前。```"prefix_name"``` と入力すると予測候補に ```"prefix"``` が現れるようになり、これを選択するとコードに ```"body_content"``` が挿入される。  
-スニペット化したい C++ ファイルのそれぞれについて、ファイル中のスニペット化したい部分を ```"// snippet-begin"``` と ```"// snippet-end"``` で囲んでおく。  
-適当な場所で ```gen.py``` を実行するとファイル名を ```"prefix_name"``` 、そのファイル中で```"// snippet-begin"``` と ```"// snippet-end"``` で囲まれた部分を ```"body_content"``` としたスニペットが作成される。囲まれた部分が無い場合、そのファイルのスニペットは作成されない。```"// snippet-end"``` のあとに改行を入れること(そのうち改行とか空白の指定を緩くするかも)。  
-```output.json``` の中身は VSCode の ```cpp.json``` (なんか変な場所にあったやつ)にコピペするなりなんなりする。  
-```gen.py``` の実行のたびに ```output.json``` は新規作成される(上書きされない)  
-同名のファイルを複数作らないこと！
+```"snippets_name"``` is the name of snippets. When you type ```"prefix_name"```, then  ```"prefix"```appears in input candidate and if you select it, ```"body_content"``` will be inserted.  
+If you want to generate snippet from a file, only you have to do is to enclose the specific parts with ```"// snippet-begin"``` and ```"// snippet-end"```.  
+When you run ```gen.py```, a snippet whose ```"prefix_name"``` is each file name without extension will be generated. If there is no enclosed parts in a file, no snippets for the file will be created. You have to insert a new line after ```"// snippet-end"```(I'll fix it in time).  
+To enable snippets, copy and paste the contents of ```output.json``` into the ```cpp.json``` or an other json file for snippets.  
+Every time you run ```gen.py```, ```output.json``` will be generated(not overwritten).  
+Don't create multiple files with the same name!
