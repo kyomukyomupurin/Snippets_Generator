@@ -1,5 +1,6 @@
 ![](https://img.shields.io/badge/license-CC0-lightgrey.svg?style=flat&logo=Creative-Commons)
 ![](https://img.shields.io/badge/Python-3.6.9-brightgreen.svg?style=flat&logo=Python)
+![](https://img.shields.io/badge/JSON-brightgreen.svg?style=flat&logo=JSON)
 ![](https://img.shields.io/badge/-VSCode-blue.svg?style=flat&logo=Visual-Studio-Code)
 ![](https://img.shields.io/badge/OS-WSL-yellow.svg?style=flat&logo=Linux)
 ![](https://img.shields.io/badge/Ubuntu-18.04-orange.svg?style=flat&logo=Ubuntu)
