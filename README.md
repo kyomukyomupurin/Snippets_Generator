@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/license-CC0-lightgrey.svg?style=flat&logo=Creative-Commons)
+[![](https://img.shields.io/badge/license-CC0-lightgrey.svg?style=flat&logo=Creative-Commons)](https://github.com/kyomukyomupurin/snippets_generator/blob/master/LICENSE)
 ![](https://img.shields.io/badge/Python-3.6.9-brightgreen.svg?style=flat&logo=Python)
 ![](https://img.shields.io/badge/JSON-brightgreen.svg?style=flat&logo=JSON)
 ![](https://img.shields.io/badge/-VSCode-blue.svg?style=flat&logo=Visual-Studio-Code)
