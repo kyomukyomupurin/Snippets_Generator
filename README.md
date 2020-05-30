@@ -9,6 +9,8 @@
 
 Snippets generator for Visual Studio Code. I developed this for competitive programming. 
 
+![](code.gif)
+
 ## How to use
 
 Edit ```snippets_settings.json```.  
