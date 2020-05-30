@@ -16,7 +16,7 @@ Snippets generator for Visual Studio Code. I developed this for competitive prog
 Edit ```snippets_settings.json```.  
 -  ```"root"``` : Path to the top directory where the snippets will be generated.  
 -  ```"output"``` : Path to the json file to be generated.  
--  ```extension``` : List of file extensions to generate snippets.  
+-  ```"extension"``` : List of file extensions to generate snippets.  
 
 The overall structure of the snippets json file in VSCode is like the following.
 
