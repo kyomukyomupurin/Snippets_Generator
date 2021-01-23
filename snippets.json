@@ -1,0 +1,27 @@
+{
+    "sample1": {
+        "prefix": "sample1",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "",
+            "using namespace std;",
+            "using int64 = long long;",
+            "",
+            "int main() {",
+            "",
+            "}",
+            "// snippet-end"
+        ]
+    },
+    "sample2": {
+        "prefix": "sample2",
+        "body": [
+            "int main() {",
+            "  std::cout << \"Hello, World!\" << std::endl;",
+            "",
+            "  return 0;",
+            "}",
+            "// snippet-end"
+        ]
+    }
+}
