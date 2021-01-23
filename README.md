@@ -7,31 +7,24 @@
 
 # Snippets Generator
 
-Snippets generator for Visual Studio Code. I developed this for competitive programming. 
+Visual Studio Code 用のスニペットファイルを自動で生成するスクリプト。主にプログラミングコンテストで使うために書いた。
 
-![](code.gif)
+## 使い方
 
-## How to use
+1. ```gen.py``` と ```snippets_settings.json``` をスニペット化したいファイルのあるフォルダにコピー
+2. ```snippets_settings.json``` を編集
+    - ```"extension"``` にはスニペット化したいファイルの拡張子のリストを入力
+    - ```output``` には生成されるスニペットファイル(JSON 形式)の出力先を入力
+3. スニペット化したいファイルについて、スニペット化する範囲を指定する
+    - コードのうち ```// snippet-begin``` と ```// snippet-end``` というタグで囲まれた範囲がスニペット化される
+    - ```// snippet-begin``` タグが存在しないファイルについては、スニペットは作成されない
+    - ```// snippet-end``` タグが存在しない場合、```// snippet-begin``` タグ以降のコードが全てスニペット化される
+    - スニペット化されるのは、ファイルの中で最初に現れる ```// snippet-begin``` タグと最初に現れる ```// snippet-end``` の間の部分のみ
+    - スニペットのキーは各ファイル名のうち拡張子を除いた部分になる
+4. ```python3 gen.py``` で実行
+5. ```snippets.json``` が生成されるので、これを VSCode のスニペットファイルにコピーする
 
-Edit ```snippets_settings.json```.  
--  ```"root"``` : Path to the top directory where the snippets will be generated.  
--  ```"output"``` : Path to the json file to be generated.  
--  ```"extension"``` : List of file extensions to generate snippets.  
+## 補足
 
-The overall structure of the snippets json file in VSCode is like the following.
-
-```json
-    "snippets_name": {
-        "prefix": "prefix_name",
-        "body": [
-            "body_content"
-        ]
-    }
-```
-
-```"snippets_name"``` is the name of snippets. When you type ```"prefix_name"```, then  ```"prefix"```appears in input candidate and if you select it, ```"body_content"``` will be inserted.  
-If you want to generate snippet from a file, only you have to do is to enclose the specific parts with ```"// snippet-begin"``` and ```"// snippet-end"```.  
-When you run ```gen.py```, a snippet whose ```"prefix_name"``` is each file name without extension will be generated. If there is no enclosed parts in a file, no snippets for the file will be created.  
-To enable snippets, copy and paste the contents of ```output.json``` into the ```cpp.json``` or an other json file for snippets.  
-Every time you run ```gen.py```, ```output.json``` will be newly generated(not overwritten).  
-Don't create multiple files with the same name!
+- サブディレクトリ内に同名のファイルが複数ある場合、最後にスニペット化されたものだけがスニペットとして反映されてしまうので、注意する。
+- ```snippets.json``` は実行の度に上書きされる。
