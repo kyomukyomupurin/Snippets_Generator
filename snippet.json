@@ -5,12 +5,15 @@
             "#include <bits/stdc++.h>",
             "",
             "using namespace std;",
-            "using int64 = long long;",
+            "",
+            "using ll = long long;",
             "",
             "int main() {",
             "",
+            "  return 0;",
             "}"
-        ]
+        ],
+        "timestamp": 1632402942.5789316
     },
     "sample2": {
         "prefix": "sample2",
@@ -20,6 +23,7 @@
             "",
             "  return 0;",
             "}"
-        ]
+        ],
+        "timestamp": 1611371167.1732354
     }
 }
