@@ -2,9 +2,11 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-using int64 = long long;
+
+using ll = long long;
 
 int main() {
 
+  return 0;
 }
 // snippet-end
