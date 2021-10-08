@@ -2,9 +2,8 @@ import json
 import os
 from os.path import join
 from pathlib import Path
-from typing import Union
 
-Snippet = dict[str, Union[str, list[str], float]]
+Snippet = dict[str, str | list[str] | float]
 
 
 def snippetize(file: str) -> Snippet:
