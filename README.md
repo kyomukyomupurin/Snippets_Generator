@@ -11,7 +11,7 @@ Visual Studio Code（VSCode）用のスニペットを作成するためのス�
 
 以下が必要です。
 
-- Python(>= 3.8)
+- Python(>= 3.10)
 
 ## Installation
 
